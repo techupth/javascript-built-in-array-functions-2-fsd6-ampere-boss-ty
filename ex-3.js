@@ -374,4 +374,11 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+
+//กรองคนที่ไม่มี member
+const allmember = bills.filter(bill => bill.member != null)
+
+//ดึง string ใน member
+const billMembers = allmember.map(bill => bill.member.name)
+
+console.log(billMembers)

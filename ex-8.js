@@ -372,7 +372,15 @@ const bills = [
         pointRate: 0.01,
     },
 ];
+const totalByLocation = bills.reduce((result, bill) => {
+    const location = bill.location;
+    const total = bill.total;
+    
+    result[location] = (result[location] || 0) + total;
+    
+    return result;
+  }, {});
+  
+  console.log(totalByLocation);
+  
 
-// Start coding here
-
-const totalPaidByLocation;
