@@ -374,3 +374,9 @@ const bills = [
 ];
 
 // Start coding here
+// ดึง total ออกมาก่อน
+// รวมผลบวก
+let totalBills = bills.reduce(function (acc, cur) {
+  return acc + cur.total;
+}, 0);
+console.log("Total bill transaction is " + totalBills);

@@ -374,5 +374,9 @@ const bills = [
 ];
 
 // Start coding here
+//เข้าถึง member
+//เช็ค !== null
+// เก็บข้อมูลใน array
+const newBills = bills.filter((dataMember) => dataMember.member !== null);
 
-const newBills;
+console.log(newBills);
