@@ -374,4 +374,14 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+const newBills = bills.filter((dataMember) => dataMember.member !== null);
+
+// console.log(newBills);
+// ได้ช่ื่อมา จะเอาแต่ name
+
+function nameMemberonly(account) {
+  return account.member.name;
+}
+
+const billMembers = newBills.map(nameMemberonly);
+console.log(billMembers);

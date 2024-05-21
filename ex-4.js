@@ -374,4 +374,24 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+const newBills = bills.filter((dataMember) => dataMember.member !== null);
+
+// ได้ช่ื่อมา จะเอาแต่ name
+
+function nameMemberonly(account) {
+  return account.member.name;
+}
+
+const billMembers = newBills.map(nameMemberonly);
+// console.log(billMembers);
+
+const totalMembers = billMembers.reduce((acc, cur) => {
+  if (!acc.includes(cur)) {
+    acc.push(cur);
+  }
+  return acc;
+}, []);
+
+console.log(totalMembers);
+
+console.log("Unique Members Count: " + totalMembers.length);
